@@ -1,6 +1,7 @@
 class testcode {
-  windowsfeature { 'telnet-client':
-    ensure   => present,
+  dsc_windowsfeature { 'telnet-client':
+    dsc_ensure => present,
+    dsc_name   => 'telnet-client',
   }
   registry_value { 'IE ESC Off Admins':
     ensure => present,
